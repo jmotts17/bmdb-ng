@@ -1,0 +1,17 @@
+<section class="heading">
+    <span class="page-title font-weight-bold font-italic">[{{title}}]</span>
+</section>
+<table class="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>ID</th><th>Genre Name</th><th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let genre of genres'>
+            <td>{{genre.id}}</td>
+            <td>{{genre.name}}</td>
+            <td>Detail | Edit</td>
+        </tr>
+    </tbody>
+</table>

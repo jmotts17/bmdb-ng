@@ -7,13 +7,17 @@ import { MovieListComponent } from './feature/movie/movie-list/movie-list.compon
 import { HttpClientModule } from '@angular/common/http';
 import { ActorListComponent } from './feature/actor/actor-list/actor-list.component';
 import { CreditListComponent } from './feature/credit/credit-list/credit-list.component';
+import { GenreListComponent } from './feature/genre/genre-list/genre-list.component';
+import { MoviegenreListComponent } from './feature/moviegenre/moviegenre-list/moviegenre-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieListComponent,
     ActorListComponent,
-    CreditListComponent
+    CreditListComponent,
+    GenreListComponent,
+    MoviegenreListComponent
   ],
   imports: [
     BrowserModule,
