@@ -9,6 +9,9 @@ import { ActorListComponent } from './feature/actor/actor-list/actor-list.compon
 import { CreditListComponent } from './feature/credit/credit-list/credit-list.component';
 import { GenreListComponent } from './feature/genre/genre-list/genre-list.component';
 import { MoviegenreListComponent } from './feature/moviegenre/moviegenre-list/moviegenre-list.component';
+import { MovieCreateComponent } from './feature/movie/movie-create/movie-create.component';
+import { ActorCreateComponent } from './feature/actor/actor-create/actor-create.component';
+import { GenreCreateComponent } from './feature/genre/genre-create/genre-create.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { MoviegenreListComponent } from './feature/moviegenre/moviegenre-list/mo
     ActorListComponent,
     CreditListComponent,
     GenreListComponent,
-    MoviegenreListComponent
+    MoviegenreListComponent,
+    MovieCreateComponent,
+    ActorCreateComponent,
+    GenreCreateComponent
   ],
   imports: [
     BrowserModule,

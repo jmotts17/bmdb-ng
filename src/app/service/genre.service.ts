@@ -16,4 +16,9 @@ export class GenreService {
   getAll() : Observable<Genre[]> {
     return this.http.get(URL+'/') as Observable<Genre[]>;
   }
+
+  // create genre
+  create(genre: Genre) : Observable<Genre> {
+    return this.http.post(URL+'/', genre) as Observable<Genre>;
+  }
 }
