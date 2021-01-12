@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Movie } from 'src/app/model/movie.class';
 import { MovieService } from 'src/app/service/movie.service';
 
@@ -13,7 +14,8 @@ export class MovieCreateComponent implements OnInit {
   submitBtnTitle = "Create";
   movie: Movie = new Movie();
 
-  constructor(private movieSvc: MovieService) { }
+  constructor(private movieSvc: MovieService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -24,6 +26,8 @@ export class MovieCreateComponent implements OnInit {
       resp => {
         this.movie = resp as Movie;
         console.log('Movie created', this.movie);
+        // forward to the movie list component
+        this.router.navigateByUrl("/movie/list");
       },
       err => {
         console.log(err);

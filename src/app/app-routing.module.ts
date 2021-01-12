@@ -5,13 +5,22 @@ import { MovieListComponent } from '../app/feature/movie/movie-list/movie-list.c
 import { CreditListComponent } from '../app/feature/credit/credit-list/credit-list.component';
 import { GenreListComponent } from '../app/feature/genre/genre-list/genre-list.component';
 import { MoviegenreListComponent } from '../app/feature/moviegenre/moviegenre-list/moviegenre-list.component';
+import { NoComponentDefinedComponent } from './core/no-component-defined/no-component-defined.component';
+import { MovieCreateComponent } from './feature/movie/movie-create/movie-create.component';
+import { ActorCreateComponent } from './feature/actor/actor-create/actor-create.component';
+import { GenreCreateComponent } from './feature/genre/genre-create/genre-create.component';
 
 const routes: Routes = [
-  { path: "movies/list", component: MovieListComponent },
-  { path: "actors/list", component: ActorListComponent },
-  { path: "credits/list", component: CreditListComponent},
-  { path: "genres/list", component: GenreListComponent},
-  { path: "movie-genres/list", component: MoviegenreListComponent}
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: "movie/list", component: MovieListComponent },
+  { path: "movie/create", component: MovieCreateComponent },
+  { path: "actor/list", component: ActorListComponent },
+  { path: "actor/create", component: ActorCreateComponent },
+  { path: "credit/list", component: CreditListComponent},
+  { path: "genre/list", component: GenreListComponent},
+  { path: "genre/create", component: GenreCreateComponent},
+  { path: "moviegenre/list", component: MoviegenreListComponent},
+  {path: '**', component: NoComponentDefinedComponent }
 ];
 
 @NgModule({

@@ -12,6 +12,8 @@ import { MoviegenreListComponent } from './feature/moviegenre/moviegenre-list/mo
 import { MovieCreateComponent } from './feature/movie/movie-create/movie-create.component';
 import { ActorCreateComponent } from './feature/actor/actor-create/actor-create.component';
 import { GenreCreateComponent } from './feature/genre/genre-create/genre-create.component';
+import { NoComponentDefinedComponent } from './core/no-component-defined/no-component-defined.component';
+import { MenuComponent } from './core/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { GenreCreateComponent } from './feature/genre/genre-create/genre-create.
     MoviegenreListComponent,
     MovieCreateComponent,
     ActorCreateComponent,
-    GenreCreateComponent
+    GenreCreateComponent,
+    NoComponentDefinedComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

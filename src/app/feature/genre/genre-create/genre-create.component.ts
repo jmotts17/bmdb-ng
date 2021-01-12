@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Genre } from 'src/app/model/genre.class';
 import { GenreService } from 'src/app/service/genre.service';
 
@@ -13,7 +14,8 @@ export class GenreCreateComponent implements OnInit {
   submitBtnTitle = "Create";
   genre: Genre = new Genre();
 
-  constructor(private genreSvc: GenreService) { }
+  constructor(private genreSvc: GenreService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -24,6 +26,8 @@ export class GenreCreateComponent implements OnInit {
       resp => {
         this.genre = resp as Genre;
         console.log('Genre created', this.genre);
+        // forward to the genre list component
+        this.router.navigateByUrl("/genre/list");
       },
       err => {
         console.log(err);
