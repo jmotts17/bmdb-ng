@@ -14,6 +14,8 @@ import { ActorCreateComponent } from './feature/actor/actor-create/actor-create.
 import { GenreCreateComponent } from './feature/genre/genre-create/genre-create.component';
 import { NoComponentDefinedComponent } from './core/no-component-defined/no-component-defined.component';
 import { MenuComponent } from './core/menu/menu.component';
+import { UserListComponent } from './feature/user/user-list/user-list.component';
+import { UserCreateComponent } from './feature/user/user-create/user-create.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { MenuComponent } from './core/menu/menu.component';
     ActorCreateComponent,
     GenreCreateComponent,
     NoComponentDefinedComponent,
-    MenuComponent
+    MenuComponent,
+    UserListComponent,
+    UserCreateComponent
   ],
   imports: [
     BrowserModule,

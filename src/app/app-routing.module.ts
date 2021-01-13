@@ -9,6 +9,8 @@ import { NoComponentDefinedComponent } from './core/no-component-defined/no-comp
 import { MovieCreateComponent } from './feature/movie/movie-create/movie-create.component';
 import { ActorCreateComponent } from './feature/actor/actor-create/actor-create.component';
 import { GenreCreateComponent } from './feature/genre/genre-create/genre-create.component';
+import { UserListComponent } from './feature/user/user-list/user-list.component';
+import { UserCreateComponent } from './feature/user/user-create/user-create.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path: "genre/list", component: GenreListComponent},
   { path: "genre/create", component: GenreCreateComponent},
   { path: "moviegenre/list", component: MoviegenreListComponent},
+  { path: "user/list", component: UserListComponent},
+  { path: "user/create", component:UserCreateComponent},
   {path: '**', component: NoComponentDefinedComponent }
 ];
 
