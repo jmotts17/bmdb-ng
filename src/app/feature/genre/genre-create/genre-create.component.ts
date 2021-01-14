@@ -27,7 +27,7 @@ export class GenreCreateComponent implements OnInit {
         this.genre = resp as Genre;
         console.log('Genre created', this.genre);
         // forward to the genre list component
-        this.router.navigateByUrl("/genre/list");
+        this.router.navigateByUrl("/genre-list");
       },
       err => {
         console.log(err);

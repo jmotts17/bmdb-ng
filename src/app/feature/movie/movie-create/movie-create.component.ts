@@ -27,7 +27,7 @@ export class MovieCreateComponent implements OnInit {
         this.movie = resp as Movie;
         console.log('Movie created', this.movie);
         // forward to the movie list component
-        this.router.navigateByUrl("/movie/list");
+        this.router.navigateByUrl("/movie-list");
       },
       err => {
         console.log(err);

@@ -16,6 +16,8 @@ import { NoComponentDefinedComponent } from './core/no-component-defined/no-comp
 import { MenuComponent } from './core/menu/menu.component';
 import { UserListComponent } from './feature/user/user-list/user-list.component';
 import { UserCreateComponent } from './feature/user/user-create/user-create.component';
+import { MovieDetailComponent } from './feature/movie/movie-detail/movie-detail.component';
+import { MovieEditComponent } from './feature/movie/movie-edit/movie-edit.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { UserCreateComponent } from './feature/user/user-create/user-create.comp
     NoComponentDefinedComponent,
     MenuComponent,
     UserListComponent,
-    UserCreateComponent
+    UserCreateComponent,
+    MovieDetailComponent,
+    MovieEditComponent
   ],
   imports: [
     BrowserModule,
