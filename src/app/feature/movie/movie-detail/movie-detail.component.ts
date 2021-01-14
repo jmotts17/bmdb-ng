@@ -35,4 +35,19 @@ export class MovieDetailComponent implements OnInit {
     );
   }
 
+  delete() {
+    // delete the movie from the DB
+    this.movieSvc.delete(this.movie.id).subscribe(
+      resp => {
+        this.movie = resp as Movie;
+        console.log('Movie deleted', this.movie);
+        // forward to the movie list component
+        this.router.navigateByUrl("/movie-list");
+      },
+      err => {
+        console.log(err);
+      }
+    );
+  }
+
 }
