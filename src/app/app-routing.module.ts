@@ -7,6 +7,7 @@ import { MovieEditComponent } from '../app/feature/movie/movie-edit/movie-edit.c
 import { ActorListComponent } from '../app/feature/actor/actor-list/actor-list.component';
 import { ActorCreateComponent } from './feature/actor/actor-create/actor-create.component';
 import { ActorDetailComponent } from './feature/actor/actor-detail/actor-detail.component';
+import { ActorEditComponent } from './feature/actor/actor-edit/actor-edit.component';
 import { CreditListComponent } from '../app/feature/credit/credit-list/credit-list.component';
 import { GenreListComponent } from '../app/feature/genre/genre-list/genre-list.component';
 import { GenreCreateComponent } from './feature/genre/genre-create/genre-create.component';
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: "actor-list", component: ActorListComponent },
   { path: "actor-create", component: ActorCreateComponent },
   { path: "actor-detail/:id", component: ActorDetailComponent },
+  { path: "actor-edit/:id", component: ActorEditComponent },
   { path: "credit-list", component: CreditListComponent},
   { path: "genre-list", component: GenreListComponent},
   { path: "genre-create", component: GenreCreateComponent},

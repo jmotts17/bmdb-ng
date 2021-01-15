@@ -19,6 +19,7 @@ import { UserCreateComponent } from './feature/user/user-create/user-create.comp
 import { MovieDetailComponent } from './feature/movie/movie-detail/movie-detail.component';
 import { MovieEditComponent } from './feature/movie/movie-edit/movie-edit.component';
 import { ActorDetailComponent } from './feature/actor/actor-detail/actor-detail.component';
+import { ActorEditComponent } from './feature/actor/actor-edit/actor-edit.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ActorDetailComponent } from './feature/actor/actor-detail/actor-detail.
     UserCreateComponent,
     MovieDetailComponent,
     MovieEditComponent,
-    ActorDetailComponent
+    ActorDetailComponent,
+    ActorEditComponent
   ],
   imports: [
     BrowserModule,
