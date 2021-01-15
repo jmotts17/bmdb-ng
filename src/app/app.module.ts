@@ -18,6 +18,7 @@ import { UserListComponent } from './feature/user/user-list/user-list.component'
 import { UserCreateComponent } from './feature/user/user-create/user-create.component';
 import { MovieDetailComponent } from './feature/movie/movie-detail/movie-detail.component';
 import { MovieEditComponent } from './feature/movie/movie-edit/movie-edit.component';
+import { ActorDetailComponent } from './feature/actor/actor-detail/actor-detail.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { MovieEditComponent } from './feature/movie/movie-edit/movie-edit.compon
     UserListComponent,
     UserCreateComponent,
     MovieDetailComponent,
-    MovieEditComponent
+    MovieEditComponent,
+    ActorDetailComponent
   ],
   imports: [
     BrowserModule,
