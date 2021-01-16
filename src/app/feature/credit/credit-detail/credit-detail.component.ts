@@ -35,4 +35,18 @@ export class CreditDetailComponent implements OnInit {
     );
   }
 
+  delete() {
+    // delete the credit from the DB
+    this.creditSvc.delete(this.credit.id).subscribe(
+      resp => {
+        this.credit = resp as Credit;
+        console.log('Credit deleted', this.credit);
+        // forward to the actor list component
+        this.router.navigateByUrl("/credit-list");
+      },
+      err => {
+        console.log(err);
+      }
+    );
+    }
 }
