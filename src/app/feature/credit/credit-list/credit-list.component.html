@@ -1,6 +1,9 @@
 <app-menu></app-menu>
 <section class="heading">
     <span class="page-title font-weight-bold font-italic">[{{title}}]</span>
+    <a routerLink='/credit-create'>
+        <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
+    </a>
 </section>
 <table class="table table-sm table-striped">
     <thead>
@@ -15,9 +18,9 @@
             <td>{{credit.actor.firstName}} {{credit.actor.lastName}}</td>
             <td>{{credit.role}}</td>
             <td><a routerLink='/credit-detail/{{credit.id}}'>
-                <img width='20' height='20' src='assets/details.png' title='Credit Details'> </a> | Edit
-            <!-- <a routerLink='/credit-edit/{{credit.id}}'>
-              <img width='20' height='20' src='assets/pencil-icon.png' title='Credit Edit'></a></td> -->
+                <img width='20' height='20' src='assets/details.png' title='Credit Details'> </a>
+            | <a routerLink='/credit-edit/{{credit.id}}'>
+              <img width='20' height='20' src='assets/pencil-icon.png' title='Credit Edit'></a></td>
         </tr>
     </tbody>
 </table>

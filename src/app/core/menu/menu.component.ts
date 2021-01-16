@@ -10,7 +10,11 @@ export class MenuComponent implements OnInit {
   menuItems : MenuItem[] = [
     new MenuItem("Movie", "/movie-list", "Movie List"),
     new MenuItem("Actor", "/actor-list", "Actor List"),
-    new MenuItem("Credit", "/credit-list", "Credit List")
+    new MenuItem("Credit", "/credit-list", "Credit List"),
+    new MenuItem("Genre", "/genre-list", "Genre List"),
+    new MenuItem("Movie Genre", "/moviegenre-list", "Movie Genre List"),
+    new MenuItem("User", "/user-list", "User List")
+
   ];
 
   constructor() { }
