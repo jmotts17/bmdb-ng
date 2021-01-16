@@ -14,8 +14,8 @@ export class ActorDetailComponent implements OnInit {
   actorId: number = 0;
 
   constructor(private actorSvc: ActorService,
-    private router: Router,
-    private route: ActivatedRoute) { }
+              private router: Router,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     // get the id from the url
