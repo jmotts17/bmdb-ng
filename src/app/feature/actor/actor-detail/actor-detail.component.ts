@@ -36,12 +36,12 @@ export class ActorDetailComponent implements OnInit {
   }
 
   delete() {
-  // delete the movie from the DB
+  // delete the actor from the DB
   this.actorSvc.delete(this.actor.id).subscribe(
     resp => {
       this.actor = resp as Actor;
       console.log('Actor deleted', this.actor);
-      // forward to the movie list component
+      // forward to the actor list component
       this.router.navigateByUrl("/actor-list");
     },
     err => {

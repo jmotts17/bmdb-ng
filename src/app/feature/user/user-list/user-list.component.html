@@ -20,7 +20,10 @@
             <td>{{user.phoneNumber}}</td>
             <td>{{user.email}}</td>
             <td>{{user.collectionValue}}</td>
-            <td>Detail | Edit</td>
+            <td><a routerLink='/user-detail/{{user.id}}'>
+                <img width='20' height='20' src='assets/details.png' title='User Details'>
+            </a> | <a routerLink='/user-edit/{{user.id}}'>
+              <img width='20' height='20' src='assets/pencil-icon.png' title='User Edit'></a></td>
         </tr>
     </tbody>
 </table>

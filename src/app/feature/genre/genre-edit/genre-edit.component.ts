@@ -42,7 +42,7 @@ export class GenreEditComponent implements OnInit {
       resp => {
         this.genre = resp as Genre;
         console.log("Genre updated", this.genre);
-        // forward to the movie list componenet
+        // forward to the genre list componenet
         this.router.navigateByUrl("/genre-list");
       },
       err => {

@@ -9,7 +9,7 @@ import { ActorService } from 'src/app/service/actor.service';
   styleUrls: ['./actor-edit.component.css']
 })
 export class ActorEditComponent implements OnInit {
-  title = "Actor Detail";
+  title = "Actor Edit";
   actor: Actor = null;
   actorId: number = 0;
   submitBtnTitle = "Save";
@@ -42,7 +42,7 @@ export class ActorEditComponent implements OnInit {
       resp => {
         this.actor = resp as Actor;
         console.log('Actor updated', this.actor);
-        // forward to the movie list componenet
+        // forward to the actor list componenet
         this.router.navigateByUrl("/actor-list");
       },
       err => {
