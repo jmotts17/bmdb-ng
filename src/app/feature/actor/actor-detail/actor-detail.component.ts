@@ -27,7 +27,7 @@ export class ActorDetailComponent implements OnInit {
     this.actorSvc.getById(this.actorId).subscribe(
       resp => {
         this.actor = resp as Actor;
-        console.log('Actor', this.actor);
+        console.log("Actor", this.actor);
       },
       err => {
         console.log(err);

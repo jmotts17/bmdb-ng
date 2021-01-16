@@ -24,6 +24,7 @@ import { GenreDetailComponent } from './feature/genre/genre-detail/genre-detail.
 import { GenreEditComponent } from './feature/genre/genre-edit/genre-edit.component';
 import { UserDetailComponent } from './feature/user/user-detail/user-detail.component';
 import { UserEditComponent } from './feature/user/user-edit/user-edit.component';
+import { CreditDetailComponent } from './feature/credit/credit-detail/credit-detail.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { UserEditComponent } from './feature/user/user-edit/user-edit.component'
     GenreDetailComponent,
     GenreEditComponent,
     UserDetailComponent,
-    UserEditComponent
+    UserEditComponent,
+    CreditDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { ActorCreateComponent } from './feature/actor/actor-create/actor-create.
 import { ActorDetailComponent } from './feature/actor/actor-detail/actor-detail.component';
 import { ActorEditComponent } from './feature/actor/actor-edit/actor-edit.component';
 import { CreditListComponent } from '../app/feature/credit/credit-list/credit-list.component';
+import { CreditDetailComponent } from '../app/feature/credit/credit-detail/credit-detail.component';
 import { GenreListComponent } from '../app/feature/genre/genre-list/genre-list.component';
 import { GenreCreateComponent } from './feature/genre/genre-create/genre-create.component';
 import { GenreDetailComponent } from './feature/genre/genre-detail/genre-detail.component';
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: "actor-detail/:id", component: ActorDetailComponent },
   { path: "actor-edit/:id", component: ActorEditComponent },
   { path: "credit-list", component: CreditListComponent},
+  { path: "credit-detail/:id", component: CreditDetailComponent},
   { path: "genre-list", component: GenreListComponent},
   { path: "genre-create", component: GenreCreateComponent},
   { path: "genre-detail/:id", component: GenreDetailComponent},

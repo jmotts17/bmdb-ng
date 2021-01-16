@@ -5,21 +5,19 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th>ID</th><th>Title</th><th>Year</th><th>Rating</th><th>Director</th><th>First Name</th><th>Last Name</th><th>Gender</th><th>Birthdate</th><th>Action</th>
+            <th>ID</th><th>Title</th><th>Actor Name</th><th>Role</th><th>Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor='let credit of credits'>
             <td>{{credit.id}}</td>
             <td>{{credit.movie.title}}</td>
-            <td>{{credit.movie.year}}</td>
-            <td>{{credit.movie.rating}}</td>
-            <td>{{credit.movie.director}}</td>
-            <td>{{credit.actor.firstName}}</td>
-            <td>{{credit.actor.lastName}}</td>
-            <td>{{credit.actor.gender}}</td>
-            <td>{{credit.actor.birthDate}}</td>
-            <td>Detail | Edit</td>
+            <td>{{credit.actor.firstName}} {{credit.actor.lastName}}</td>
+            <td>{{credit.role}}</td>
+            <td><a routerLink='/credit-detail/{{credit.id}}'>
+                <img width='20' height='20' src='assets/details.png' title='Credit Details'> </a> | Edit
+            <!-- <a routerLink='/credit-edit/{{credit.id}}'>
+              <img width='20' height='20' src='assets/pencil-icon.png' title='Credit Edit'></a></td> -->
         </tr>
     </tbody>
 </table>

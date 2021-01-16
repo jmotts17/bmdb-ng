@@ -16,4 +16,9 @@ export class CreditService {
   getAll() : Observable<Credit[]> {
     return this.http.get(URL+'/') as Observable<Credit[]>;
   }
+
+  //get by id
+  getById(id) : Observable<Credit> {
+    return this.http.get(URL+'/'+id) as Observable<Credit>;
+  }
 }
