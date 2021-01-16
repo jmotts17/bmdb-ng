@@ -26,7 +26,7 @@ export class UserCreateComponent implements OnInit {
       resp => {
         this.user = resp as User;
         console.log('User Created', this.user);
-        // forward to the actor list component
+        // forward to the user list component
         this.router.navigateByUrl("/user-list");
       },
       err => {
