@@ -1,4 +1,13 @@
-<table class='table table-sm'>
+<nav>
+    <ul>
+        BMDB
+        <li *ngFor='let item of menuItems' title="{{item.tooltip}}">
+            <a routerLink="{{item.href}}">{{item.display}}</a>
+        </li>
+    </ul>
+</nav>
+
+<!-- <table class='table table-sm'>
     <tr>
         <th><a routerLink='/movie-list'>Movie List</a></th>
         <th><a routerLink='/actor-list'>Actor List</a></th>
@@ -7,4 +16,4 @@
         <th><a routerLink='/moviegenre-list'>Movie Genre List</a></th>
         <th><a routerLink='/user-list'>User List</a></th>
     </tr>
-</table>
+</table> -->
