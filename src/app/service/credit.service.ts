@@ -12,12 +12,12 @@ export class CreditService {
   constructor(private http: HttpClient) { }
 
   // service functions
-  //get all credits
+  // get all credits
   getAll() : Observable<Credit[]> {
     return this.http.get(URL+'/') as Observable<Credit[]>;
   }
 
-  //get by id
+  // get by id
   getById(id) : Observable<Credit> {
     return this.http.get(URL+'/'+id) as Observable<Credit>;
   }

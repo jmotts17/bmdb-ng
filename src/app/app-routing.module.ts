@@ -17,6 +17,7 @@ import { GenreCreateComponent } from './feature/genre/genre-create/genre-create.
 import { GenreDetailComponent } from './feature/genre/genre-detail/genre-detail.component';
 import { GenreEditComponent } from './feature/genre/genre-edit/genre-edit.component';
 import { MoviegenreListComponent } from '../app/feature/moviegenre/moviegenre-list/moviegenre-list.component';
+import { MoviegenreDetailComponent } from '../app/feature/moviegenre/moviegenre-detail/moviegenre-detail.component';
 import { UserListComponent } from './feature/user/user-list/user-list.component';
 import { UserCreateComponent } from './feature/user/user-create/user-create.component';
 import { UserDetailComponent } from './feature/user/user-detail/user-detail.component';
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: "genre-detail/:id", component: GenreDetailComponent},
   { path: "genre-edit/:id", component: GenreEditComponent},
   { path: "moviegenre-list", component: MoviegenreListComponent},
+  { path: "moviegenre-detail/:id", component: MoviegenreDetailComponent},
   { path: "user-list", component: UserListComponent},
   { path: "user-create", component:UserCreateComponent},
   { path: "user-detail/:id", component:UserDetailComponent},

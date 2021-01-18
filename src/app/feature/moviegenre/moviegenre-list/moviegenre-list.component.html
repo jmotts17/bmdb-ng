@@ -16,7 +16,10 @@
             <td>{{mg.movie.rating}}</td>
             <td>{{mg.movie.director}}</td>
             <td>{{mg.genre.name}}</td>
-            <td>Detail | Edit</td>
+            <td><a routerLink='/moviegenre-detail/{{mg.id}}'>
+                <img width='20' height='20' src='assets/details.png' title='Movie Genre Details'> </a> | Edit</td>
+            <!-- | <a routerLink='/credit-edit/{{credit.id}}'>
+              <img width='20' height='20' src='assets/pencil-icon.png' title='Credit Edit'></a></td> -->
         </tr>
     </tbody>
 </table>
