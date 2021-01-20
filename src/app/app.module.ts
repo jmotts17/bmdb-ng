@@ -30,6 +30,7 @@ import { CreditCreateComponent } from './feature/credit/credit-create/credit-cre
 import { MoviegenreDetailComponent } from './feature/moviegenre/moviegenre-detail/moviegenre-detail.component';
 import { UserLoginComponent } from './feature/user/user-login/user-login.component';
 import { MoviegenreCreateComponent } from './feature/moviegenre/moviegenre-create/moviegenre-create.component';
+import { MoviegenreEditComponent } from './feature/moviegenre/moviegenre-edit/moviegenre-edit.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { MoviegenreCreateComponent } from './feature/moviegenre/moviegenre-creat
     CreditCreateComponent,
     MoviegenreDetailComponent,
     UserLoginComponent,
-    MoviegenreCreateComponent
+    MoviegenreCreateComponent,
+    MoviegenreEditComponent
   ],
   imports: [
     BrowserModule,

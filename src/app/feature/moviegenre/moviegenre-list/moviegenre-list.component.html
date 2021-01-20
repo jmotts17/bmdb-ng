@@ -20,9 +20,9 @@
             <td>{{mg.movie.director}}</td>
             <td>{{mg.genre.name}}</td>
             <td><a routerLink='/moviegenre-detail/{{mg.id}}'>
-                <img width='20' height='20' src='assets/details.png' title='Movie Genre Details'> </a> | Edit</td>
-            <!-- | <a routerLink='/credit-edit/{{credit.id}}'>
-              <img width='20' height='20' src='assets/pencil-icon.png' title='Credit Edit'></a></td> -->
+                <img width='20' height='20' src='assets/details.png' title='Movie Genre Details'> </a>
+            | <a routerLink='/moviegenre-edit/{{mg.id}}'>
+              <img width='20' height='20' src='assets/pencil-icon.png' title='Movie Genre Edit'></a></td>
         </tr>
     </tbody>
 </table>
