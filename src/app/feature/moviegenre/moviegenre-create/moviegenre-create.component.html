@@ -1,0 +1,29 @@
+<app-menu></app-menu>
+<section class="heading">
+    <span class='component-title'>[{{title}}]</span>
+  </section>
+  <main class="single">
+    <table class="table table-sm">
+      <tr>
+        <td>
+            Movie:
+        </td>
+        <select [(ngModel)]="moviegenre.movie" class="rounded">
+            <option *ngFor='let movie of movies' [ngValue]='movie'>{{movie.title + " [" + movie.year + "]"}}</option>
+        </select>
+        <tr>
+            <td>
+                Genre:
+            </td>
+            <td>
+                <select [(ngModel)]="moviegenre.genre" class="rounded">
+                    <option *ngFor='let genre of genres' [ngValue]='genre'>{{genre.name}}</option>
+                </select>
+            </td>
+          </tr>
+    </table>
+  </main>
+  <span><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span> |
+  <!--
+  <span><button (click)="backClicked()" class="btn btn-sm btn-primary">Back</button></span>
+  -->
