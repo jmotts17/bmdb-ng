@@ -31,6 +31,7 @@ import { MoviegenreDetailComponent } from './feature/moviegenre/moviegenre-detai
 import { UserLoginComponent } from './feature/user/user-login/user-login.component';
 import { MoviegenreCreateComponent } from './feature/moviegenre/moviegenre-create/moviegenre-create.component';
 import { MoviegenreEditComponent } from './feature/moviegenre/moviegenre-edit/moviegenre-edit.component';
+import { SortPipe } from './pipe/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { MoviegenreEditComponent } from './feature/moviegenre/moviegenre-edit/mo
     MoviegenreDetailComponent,
     UserLoginComponent,
     MoviegenreCreateComponent,
-    MoviegenreEditComponent
+    MoviegenreEditComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,
