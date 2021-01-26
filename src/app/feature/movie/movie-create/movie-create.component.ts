@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Movie } from 'src/app/model/movie.class';
@@ -15,7 +16,8 @@ export class MovieCreateComponent implements OnInit {
   movie: Movie = new Movie();
 
   constructor(private movieSvc: MovieService,
-              private router: Router) { }
+              private router: Router,
+              private loc: Location) { }
 
   ngOnInit(): void {
   }
@@ -33,6 +35,10 @@ export class MovieCreateComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
 }
