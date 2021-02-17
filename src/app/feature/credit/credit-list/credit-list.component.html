@@ -8,14 +8,18 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th>ID</th><th>Title</th><th>Actor Name</th><th>Role</th><th>Action</th>
+            <th><button [ngClass]='colClasses' (click)="sortBy('id')">ID</button></th>
+            <th><button [ngClass]='colClasses' (click)="sortBy('movieTitle')">Title</button></th>
+            <th><button [ngClass]='colClasses' (click)="sortBy('actorName')">Actor Name</button></th>
+            <th><button [ngClass]='colClasses' (click)="sortBy('role')">Role</button></th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let credit of credits'>
+        <tr *ngFor='let credit of credits | sort: sortCriteria:sortOrder'>
             <td>{{credit.id}}</td>
             <td>{{credit.movie.title}}</td>
-            <td>{{credit.actor.firstName}} {{credit.actor.lastName}}</td>
+            <td>{{credit.actor.lastName}}, {{credit.actor.firstName}}</td>
             <td>{{credit.role}}</td>
             <td><a routerLink='/credit-detail/{{credit.id}}'>
                 <img width='20' height='20' src='assets/details.png' title='Credit Details'> </a>
