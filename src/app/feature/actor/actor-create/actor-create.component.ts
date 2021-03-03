@@ -25,7 +25,6 @@ export class ActorCreateComponent implements OnInit {
     this.actorSvc.create(this.actor).subscribe(
       resp => {
         this.actor = resp as Actor;
-        console.log('Actor created', this.actor);
         // forward to the actor list component
         this.router.navigateByUrl("/actor-list");
       },

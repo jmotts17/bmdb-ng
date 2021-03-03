@@ -22,13 +22,11 @@ export class GenreEditComponent implements OnInit {
         // get the id from the url
         this.route.params.subscribe(
           parms => {this.genreId = parms['id'];
-        console.log("GenreID = " + this.genreId);
         });
         // get genre by id
         this.genreSvc.getById(this.genreId).subscribe(
           resp => {
             this.genre = resp as Genre;
-            console.log("Genre", this.genre);
           },
           err => {
             console.log(err);
@@ -41,7 +39,6 @@ export class GenreEditComponent implements OnInit {
     this.genreSvc.update(this.genre).subscribe(
       resp => {
         this.genre = resp as Genre;
-        console.log("Genre updated", this.genre);
         // forward to the genre list componenet
         this.router.navigateByUrl("/genre-list");
       },

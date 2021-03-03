@@ -36,7 +36,6 @@ export class CreditEditComponent implements OnInit {
     this.creditSvc.getById(this.creditId).subscribe(
       resp => {
         this.credit = resp as Credit;
-        console.log("Credit", this.credit);
       },
       err => {
         console.log(err);
@@ -67,7 +66,6 @@ export class CreditEditComponent implements OnInit {
     this.creditSvc.create(this.credit).subscribe(
       resp => {
         this.credit = resp as Credit;
-        console.log('Credit created', this.credit);
         // forward to the credit list component
         this.router.navigateByUrl("/credit-list");
       },

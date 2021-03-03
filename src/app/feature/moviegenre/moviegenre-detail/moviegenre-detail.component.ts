@@ -21,13 +21,11 @@ export class MoviegenreDetailComponent implements OnInit {
     // get the id from the url
     this.route.params.subscribe(
       parms => {this.movieGenreId = parms['id'];
-      console.log("movieGenreID = " +  this.movieGenre);
     });
     // get movieGenre by id
     this.movieGenreSvc.getById(this.movieGenreId).subscribe(
       resp => {
         this.movieGenre = resp as MovieGenre;
-        console.log("MovieGenre", this.movieGenre);
       },
       err => {
         console.log(err);
@@ -40,7 +38,6 @@ export class MoviegenreDetailComponent implements OnInit {
     this.movieGenreSvc.delete(this.movieGenre.id).subscribe(
       resp => {
         this.movieGenre = resp as MovieGenre;
-        console.log('MovieGenre deleted', this.movieGenre);
         // forward to the actor list component
         this.router.navigateByUrl("/moviegenre-list");
       },

@@ -24,13 +24,11 @@ export class MovieEditComponent implements OnInit {
     // get the id from the url
     this.route.params.subscribe(
       parms => {this.movieId = parms['id'];
-      console.log("MovieID = " + this.movieId);
     });
     // get movie by id
     this.movieSvc.getById(this.movieId).subscribe(
       resp => {
       this.movie = resp as Movie;
-      console.log('Movie', this.movie);
       },
       err => {
         console.log(err);
@@ -43,7 +41,6 @@ export class MovieEditComponent implements OnInit {
     this.movieSvc.update(this.movie).subscribe(
       resp => {
         this.movie = resp as Movie;
-        console.log('Movie updated', this.movie);
         // forward to the movie list component
         this.router.navigateByUrl("/movie-list");
       },

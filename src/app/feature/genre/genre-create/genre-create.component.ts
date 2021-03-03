@@ -25,7 +25,6 @@ export class GenreCreateComponent implements OnInit {
     this.genreSvc.create(this.genre).subscribe(
       resp => {
         this.genre = resp as Genre;
-        console.log('Genre created', this.genre);
         // forward to the genre list component
         this.router.navigateByUrl("/genre-list");
       },

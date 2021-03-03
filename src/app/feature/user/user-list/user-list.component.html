@@ -8,14 +8,15 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th>ID</th><th>Username</th><th>Name</th><th>Action</th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('username')">Username</a></th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('lastName')">Name</a></th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let user of users'>
-            <td>{{user.id}}</td>
+        <tr *ngFor='let user of users | sort: sortCriteria:sortOrder'>
             <td>{{user.username}}</td>
-            <td>{{user.firstName}} {{user.lastName}}</td>
+            <td>{{user.lastName}}, {{user.firstName}}</td>
             <td><a routerLink='/user-detail/{{user.id}}'>
                 <img width='20' height='20' src='assets/details.png' title='User Details'>
             </a> | <a routerLink='/user-edit/{{user.id}}'>

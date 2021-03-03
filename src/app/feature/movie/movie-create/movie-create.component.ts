@@ -27,7 +27,6 @@ export class MovieCreateComponent implements OnInit {
     this.movieSvc.create(this.movie).subscribe(
       resp => {
         this.movie = resp as Movie;
-        console.log('Movie created', this.movie);
         // forward to the movie list component
         this.router.navigateByUrl("/movie-list");
       },

@@ -22,13 +22,12 @@ export class ActorEditComponent implements OnInit {
     // get the id from the url
     this.route.params.subscribe(
       parms => {this.actorId = parms['id'];
-    console.log("ActorID = " + this.actorId);
     });
+
     // get actor by id
     this.actorSvc.getById(this.actorId).subscribe(
       resp => {
         this.actor = resp as Actor;
-        console.log('Actor', this.actor);
       },
       err => {
         console.log(err);
@@ -41,7 +40,6 @@ export class ActorEditComponent implements OnInit {
     this.actorSvc.update(this.actor).subscribe(
       resp => {
         this.actor = resp as Actor;
-        console.log('Actor updated', this.actor);
         // forward to the actor list componenet
         this.router.navigateByUrl("/actor-list");
       },

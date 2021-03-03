@@ -40,7 +40,6 @@ export class GenreDetailComponent implements OnInit {
     this.genreSvc.delete(this.genre.id).subscribe(
       resp => {
         this.genre = resp as Genre;
-        console.log("Genre deleted", this.genre);
         // forward to the genre list component
         this.router.navigateByUrl("/genre-list");
       },

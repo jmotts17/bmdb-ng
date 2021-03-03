@@ -19,14 +19,11 @@ export class GenreListComponent implements OnInit {
   constructor(private genreSvc: GenreService,
               private sysSvc: SystemService) { }
 
-  ngOnInit(): void {
-    // if coming from login we should have an authenticated user inside sysSvc
-    console.log("genre list - loggedInUser?", this.sysSvc.loggedInUser);    
+  ngOnInit(): void {    
     // populate list of genres
     this.genreSvc.getAll().subscribe(
       resp => {
         this.genres = resp as Genre[];
-        console.log('Genres', this.genres);
       },
       err => {
         console.log(err);

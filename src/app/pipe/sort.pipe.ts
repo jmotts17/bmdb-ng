@@ -6,8 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SortPipe implements PipeTransform {
 
   transform(arr: any[], col: string = 'name', order: string = 'desc'): any[] {
-    console.log("pipe transform method called");
-    console.log(`Sort movies by ${col} order ${order}`)
+
     return arr.sort(compareFn);
 
     function compareFn(a, b) {
@@ -25,10 +24,5 @@ export class SortPipe implements PipeTransform {
         return 1 * multiplier;
     }
   }
-
-
-  // transform(value: unknown, ...args: unknown[]): unknown {
-  //   return null;
-  // }
 
 }
