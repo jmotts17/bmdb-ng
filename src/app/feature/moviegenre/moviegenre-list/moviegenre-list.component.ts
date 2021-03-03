@@ -12,6 +12,9 @@ export class MoviegenreListComponent implements OnInit {
 
   title = "Movie Genre List";
   movieGenres: MovieGenre[] = [];
+  sortCriteria: string = "id";
+  sortOrder: string = "asc";
+  colClasses = "btn btn-link font-weight-bold";
 
   constructor(private moviegenreSvc: MoviegenreService,
               private sysSvc: SystemService) { }
@@ -23,12 +26,22 @@ export class MoviegenreListComponent implements OnInit {
     this.moviegenreSvc.getAll().subscribe(
       resp => {
         this.movieGenres = resp as MovieGenre[];
-        console.log('Movie Genres', this.movieGenres);
+        for(let mg of this.movieGenres) {
+          mg.movieTitle = mg.movie.title;
+          mg.movieGenre = mg.genre.name;
+        }
       },
       err => {
         console.log(err);
       }
     )
+  }
+
+  sortBy(column: string): void {
+    if(column == this.sortCriteria){
+      this.sortOrder = (this.sortOrder == "desc") ? "asc" : "desc";
+    }
+    this.sortCriteria = column;
   }
 
 }

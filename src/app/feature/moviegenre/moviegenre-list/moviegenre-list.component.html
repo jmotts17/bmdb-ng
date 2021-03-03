@@ -8,16 +8,14 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th>ID</th><th>Title</th><th>Year</th><th>Rating</th><th>Director</th><th>Genre Name</th><th>Action</th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('movieTitle')">Title</a></th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('movieGenre')">Genre</a></th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let mg of movieGenres'>
-            <td>{{mg.id}}</td>
+        <tr *ngFor='let mg of movieGenres | sort: sortCriteria:sortOrder'>
             <td>{{mg.movie.title}}</td>
-            <td>{{mg.movie.year}}</td>
-            <td>{{mg.movie.rating}}</td>
-            <td>{{mg.movie.director}}</td>
             <td>{{mg.genre.name}}</td>
             <td><a routerLink='/moviegenre-detail/{{mg.id}}'>
                 <img width='20' height='20' src='assets/details.png' title='Movie Genre Details'> </a>

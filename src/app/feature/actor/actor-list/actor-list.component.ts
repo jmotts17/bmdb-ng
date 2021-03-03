@@ -20,13 +20,10 @@ export class ActorListComponent implements OnInit {
               private sysSvc: SystemService) { }
 
   ngOnInit(): void {
-    // if coming from login we should have an authenticated user inside sysSvc
-    console.log("actor list - loggedInUser?", this.sysSvc.loggedInUser);
     // populate list of actors
     this.actorSvc.getAll().subscribe(
       resp => {
         this.actors = resp as Actor[];
-        console.log('Actors', this.actors);
       },
       err => {
         console.log(err);
@@ -35,7 +32,6 @@ export class ActorListComponent implements OnInit {
   }
 
   sortBy(column: string): void {
-    console.log("movie list sortBy called")
     if(column == this.sortCriteria){
       this.sortOrder = (this.sortOrder == "desc") ? "asc" : "desc";
     }

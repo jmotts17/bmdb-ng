@@ -8,12 +8,12 @@
 <table class="table table-sm table-striped">
     <thead>
         <tr>
-            <th>ID</th><th>Genre</th><th>Action</th>
+            <th><a [ngClass]='colClasses' (click)="sortBy('name')">Genre</a></th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor='let genre of genres'>
-            <td>{{genre.id}}</td>
+        <tr *ngFor='let genre of genres | sort: sortCriteria:sortOrder'>
             <td>{{genre.name}}</td>
             <td><a routerLink='/genre-detail/{{genre.id}}'>
                 <img width='20' height='20' src='assets/details.png' title='Genre Details'>

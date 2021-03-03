@@ -19,9 +19,7 @@ export class CreditListComponent implements OnInit {
   constructor(private creditSvc: CreditService,
               private sysSvc: SystemService) { }
 
-  ngOnInit(): void {
-    // if coming from login we should have an authenticated user inside sysSvc
-    console.log("credit list - loggedInUser?", this.sysSvc.loggedInUser);    
+  ngOnInit(): void {   
     //populate list of credits
     this.creditSvc.getAll().subscribe(
       resp => {
@@ -38,7 +36,6 @@ export class CreditListComponent implements OnInit {
   }
 
   sortBy(column: string): void {
-    console.log("movie list sortBy called")
     if(column == this.sortCriteria){
       this.sortOrder = (this.sortOrder == "desc") ? "asc" : "desc";
     }
