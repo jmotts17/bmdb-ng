@@ -14,7 +14,7 @@ export class MenuComponent implements OnInit {
     new MenuItem("Genre", "/genre-list", "Genre List"),
     new MenuItem("Movie Genre", "/moviegenre-list", "Movie Genre List"),
     new MenuItem("User", "/user-list", "User List"),
-    new MenuItem("Login", "/user-login", "User Login")
+    new MenuItem("Logout", "/user-login", "Logout")
   ];
 
   constructor() { }
