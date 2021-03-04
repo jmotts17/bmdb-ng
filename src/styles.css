@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.list-heading {
+  text-align: center;
+  font-size: 50px;
+  padding: 0.5% 0;
+}
