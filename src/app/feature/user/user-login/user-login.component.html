@@ -11,8 +11,7 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <div class="main">
-    <div class="container">
-        <center>
+    <div class="container text-center">
             <div class="middle">
                 <div id="login">
                     <form action="javascript:void(0);" method="get">
@@ -20,7 +19,7 @@
                             <p><span class="fa fa-user"></span><td><input [(ngModel)]='user.username' name='UserName' type="text" placeholder="Username"></td></p> <!-- JS because of IE support; better: placeholder="Username" -->
                             <p><span class="fa fa-lock"></span><input [(ngModel)]='user.password' name='Password' type="password" placeholder="Password"></p> <!-- JS because of IE support; better: placeholder="Password" -->
                             <div>
-                                <span style="width:50%; text-align:center;  display: inline-block;"><input (click)="login()" type="submit" value="Sign In"></span>                  
+                                <span style="width:50%; display: inline-block;"><input (click)="login()" type="submit" value="Sign In"></span>                  
                                 <div style="color:#FFF; margin-top: 5px; font-style: italic;">{{message}}</div>
                             </div>
                         </fieldset>
@@ -32,6 +31,5 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
-        </center>
     </div>
 </div>
