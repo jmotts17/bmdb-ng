@@ -1,28 +1,37 @@
-<div class="welcome">
-    <h1>{{title}}</h1>
-</div>
-<div class="component-content">
-    <form class="text-center">
-        <table *ngIf='user' class="table-sm">
-            <tr class="text-center">
-                <td colspan="2">Login</td>
-            </tr>
-            <tr class="text-center">
-                <td>Username:</td>
-                <td><input [(ngModel)]='user.username' name='UserName' type="text"></td>
-            </tr>
-            <tr class="text-center">
-                <td>Password:</td>
-                <td><input [(ngModel)]='user.password' name='Password' type="password"></td>
-            </tr>
-            <tr>
-                <td class="text-center" colspan="2">
-                    <button type="submit" (click)="login()" class="btn btn-primary">Login</button>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2"><label class="text-sm-left">{{message}}</label></td>
-            </tr>
-        </table>
-    </form>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!-- Include the above in your HEAD tag -->
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<div class="main">
+    <div class="container">
+        <center>
+            <div class="middle">
+                <div id="login">
+                    <form action="javascript:void(0);" method="get">
+                        <fieldset class="clearfix">
+                            <p><span class="fa fa-user"></span><td><input [(ngModel)]='user.username' name='UserName' type="text" placeholder="Username"></td></p> <!-- JS because of IE support; better: placeholder="Username" -->
+                            <p><span class="fa fa-lock"></span><input [(ngModel)]='user.password' name='Password' type="password" placeholder="Password"></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                            <div>
+                                <span style="width:50%; text-align:center;  display: inline-block;"><input (click)="login()" type="submit" value="Sign In"></span>                  
+                                <div style="color:#FFF; margin-top: 5px; font-style: italic;">{{message}}</div>
+                            </div>
+                        </fieldset>
+                        <div class="clearfix"></div>
+                    </form>
+                    <div class="clearfix"></div>
+                </div> <!-- end login -->
+                <div class="logo">BMDB
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </center>
+    </div>
 </div>
