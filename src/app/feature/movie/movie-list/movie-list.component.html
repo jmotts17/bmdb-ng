@@ -6,19 +6,19 @@
         <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
     </a>
 </section>
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped table-hover table-bordered">
     <thead>
         <tr>    
             <th><a [ngClass]='colClasses' (click)="sortBy('title')">Title</a></th>
-            <th><a [ngClass]='colClasses' (click)="sortBy('year')">Year</a></th>
-            <th>Action</th>
+            <th class="text-center"><a [ngClass]='colClasses' (click)="sortBy('year')">Year</a></th>
+            <th class="text-center">Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor='let movie of movies | sort: sortCriteria:sortOrder'>    
-            <td>{{movie.title}}</td>
-            <td>{{movie.year}}</td>
-            <td><a routerLink='/movie-detail/{{movie.id}}'>
+            <td class="data-padding">{{movie.title}}</td>
+            <td class="text-center">{{movie.year}}</td>
+            <td class="text-center"><a routerLink='/movie-detail/{{movie.id}}'>
                 <img width='20' height='20' src='assets/details.png' title='Movie Details'>
             </a> | <a routerLink='/movie-edit/{{movie.id}}'>
               <img width='20' height='20' src='assets/pencil-icon.png' title='Movie Edit'>
