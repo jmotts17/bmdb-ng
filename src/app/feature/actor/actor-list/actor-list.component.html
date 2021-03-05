@@ -5,17 +5,17 @@
         <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
     </a>
 </section>
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped table-hover table-bordered">
     <thead>
         <tr>
             <th><a [ngClass]='colClasses' (click)="sortBy('lastName')">Name</a></th>
-            <th>Action</th>
+            <th class="text-center">Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor='let actor of actors | sort: sortCriteria:sortOrder'>
-            <td>{{actor.lastName}}, {{actor.firstName}}</td>
-            <td><a routerLink='/actor-detail/{{actor.id}}'>
+            <td class="data-padding">{{actor.lastName}}, {{actor.firstName}}</td>
+            <td class="text-center"><a routerLink='/actor-detail/{{actor.id}}'>
                 <img width='20' height='20' src='assets/details.png' title='Actor Details'>
             </a> | <a routerLink='/actor-edit/{{actor.id}}'>
               <img width='20' height='20' src='assets/pencil-icon.png' title='Actor Edit'></a></td>
