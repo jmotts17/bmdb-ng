@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Actor } from 'src/app/model/actor.class';
 import { ActorService } from 'src/app/service/actor.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-actor-create',
@@ -15,7 +16,8 @@ export class ActorCreateComponent implements OnInit {
   actor: Actor = new Actor();
 
   constructor(private actorSvc: ActorService,
-              private router: Router) { }
+              private router: Router,
+              private loc: Location) { }
 
   ngOnInit(): void {
   }
@@ -32,6 +34,10 @@ export class ActorCreateComponent implements OnInit {
         console.log(err);
       }
     )
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
 }

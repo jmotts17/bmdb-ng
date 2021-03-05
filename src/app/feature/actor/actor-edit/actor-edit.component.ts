@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Actor } from 'src/app/model/actor.class';
 import { ActorService } from 'src/app/service/actor.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-actor-edit',
@@ -16,7 +17,8 @@ export class ActorEditComponent implements OnInit {
 
   constructor(private actorSvc: ActorService,
               private router: Router,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private loc: Location) { }
 
   ngOnInit(): void {
     // get the id from the url
@@ -47,6 +49,10 @@ export class ActorEditComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
 }
