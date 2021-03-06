@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Genre } from 'src/app/model/genre.class';
 import { GenreService } from 'src/app/service/genre.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-genre-edit',
@@ -16,7 +17,8 @@ export class GenreEditComponent implements OnInit {
 
   constructor(private genreSvc: GenreService,
               private router: Router,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private loc: Location) { }
 
   ngOnInit(): void {
         // get the id from the url
@@ -46,6 +48,10 @@ export class GenreEditComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
 }

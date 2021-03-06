@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Genre } from 'src/app/model/genre.class';
 import { GenreService } from 'src/app/service/genre.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-genre-create',
@@ -15,7 +16,8 @@ export class GenreCreateComponent implements OnInit {
   genre: Genre = new Genre();
 
   constructor(private genreSvc: GenreService,
-              private router: Router) { }
+              private router: Router,
+              private loc: Location) { }
 
   ngOnInit(): void {
   }
@@ -32,6 +34,10 @@ export class GenreCreateComponent implements OnInit {
         console.log(err);
       }
     )
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
 }
