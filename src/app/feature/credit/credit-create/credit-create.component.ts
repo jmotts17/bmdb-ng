@@ -6,6 +6,7 @@ import { Movie } from 'src/app/model/movie.class';
 import { ActorService } from 'src/app/service/actor.service';
 import { CreditService } from 'src/app/service/credit.service';
 import { MovieService } from 'src/app/service/movie.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-credit-create',
@@ -22,7 +23,8 @@ export class CreditCreateComponent implements OnInit {
   constructor(private creditSvc: CreditService,
               private actorSvc: ActorService,
               private movieSvc: MovieService,
-              private router: Router) { }
+              private router: Router,
+              private loc: Location) { }
 
   ngOnInit(): void {
     // due to foreign key constraints we'll need to get a 
@@ -59,6 +61,10 @@ export class CreditCreateComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
 }

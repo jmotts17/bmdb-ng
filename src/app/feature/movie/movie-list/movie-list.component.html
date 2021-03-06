@@ -19,10 +19,11 @@
             <td class="data-padding">{{movie.title}}</td>
             <td class="text-center">{{movie.year}}</td>
             <td class="text-center"><a routerLink='/movie-detail/{{movie.id}}'>
-                <img width='20' height='20' src='assets/details.png' title='Movie Details'>
-            </a> | <a routerLink='/movie-edit/{{movie.id}}'>
-              <img width='20' height='20' src='assets/pencil-icon.png' title='Movie Edit'>
-          </a></td>
+                <img width='20' height='20' src='assets/details.png' title='Movie Details'></a> 
+                <span class="seperator">|</span> 
+                <a routerLink='/movie-edit/{{movie.id}}'>
+              <img width='20' height='20' src='assets/pencil-icon.png' title='Movie Edit'></a>
+            </td>
         </tr>
     </tbody>
 </table>

@@ -6,6 +6,7 @@ import { Movie } from 'src/app/model/movie.class';
 import { ActorService } from 'src/app/service/actor.service';
 import { CreditService } from 'src/app/service/credit.service';
 import { MovieService } from 'src/app/service/movie.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-credit-edit',
@@ -24,7 +25,8 @@ export class CreditEditComponent implements OnInit {
               private actorSvc: ActorService,
               private movieSvc: MovieService,
               private route: ActivatedRoute,
-              private router: Router) { }
+              private router: Router,
+              private loc: Location) { }
 
   ngOnInit(): void {
     // 1) get id from url
@@ -73,6 +75,10 @@ export class CreditEditComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
   compActor(a: Actor, b: Actor): boolean {
