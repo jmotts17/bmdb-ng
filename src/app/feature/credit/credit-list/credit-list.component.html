@@ -5,21 +5,21 @@
         <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
     </a>
 </section>
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped table-hover table-bordered">
     <thead>
         <tr>
             <th><a [ngClass]='colClasses' (click)="sortBy('movieTitle')">Title</a></th>
             <th><a [ngClass]='colClasses' (click)="sortBy('actorName')">Actor Name</a></th>
             <th><a [ngClass]='colClasses' (click)="sortBy('role')">Role</a></th>
-            <th>Action</th>
+            <th class="text-center">Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor='let credit of credits | sort: sortCriteria:sortOrder'>
-            <td>{{credit.movie.title}}</td>
-            <td>{{credit.actor.lastName}}, {{credit.actor.firstName}}</td>
-            <td>{{credit.role}}</td>
-            <td><a routerLink='/credit-detail/{{credit.id}}'>
+            <td class="data-padding">{{credit.movie.title}}</td>
+            <td class="data-padding">{{credit.actor.lastName}}, {{credit.actor.firstName}}</td>
+            <td class="data-padding">{{credit.role}}</td>
+            <td class="text-center"><a routerLink='/credit-detail/{{credit.id}}'>
                 <img width='20' height='20' src='assets/details.png' title='Credit Details'> </a>
             | <a routerLink='/credit-edit/{{credit.id}}'>
               <img width='20' height='20' src='assets/pencil-icon.png' title='Credit Edit'></a></td>
