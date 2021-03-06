@@ -5,20 +5,23 @@
         <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
     </a>
 </section>
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped table-hover table-bordered">
     <thead>
         <tr>
             <th><a [ngClass]='colClasses' (click)="sortBy('name')">Genre</a></th>
-            <th>Action</th>
+            <th class="text-center">Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor='let genre of genres | sort: sortCriteria:sortOrder'>
-            <td>{{genre.name}}</td>
-            <td><a routerLink='/genre-detail/{{genre.id}}'>
-                <img width='20' height='20' src='assets/details.png' title='Genre Details'>
-            </a> | <a routerLink='/genre-edit/{{genre.id}}'>
-              <img width='20' height='20' src='assets/pencil-icon.png' title='Genre Edit'></a></td>
+            <td class="data-padding">{{genre.name}}</td>
+            <td class="text-center">
+                <a routerLink='/genre-detail/{{genre.id}}'>
+                <img width='20' height='20' src='assets/details.png' title='Genre Details'></a> 
+                <span class="seperator">|</span>
+                <a routerLink='/genre-edit/{{genre.id}}'>
+                <img width='20' height='20' src='assets/pencil-icon.png' title='Genre Edit'></a>
+            </td>
         </tr>
     </tbody>
 </table>
