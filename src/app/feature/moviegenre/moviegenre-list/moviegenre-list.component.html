@@ -5,22 +5,25 @@
         <img width='20' height='20' src='assets/add-icon.png' title='Add New'>
     </a>
 </section>
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped table-hover table-bordered">
     <thead>
         <tr>
             <th><a [ngClass]='colClasses' (click)="sortBy('movieTitle')">Title</a></th>
             <th><a [ngClass]='colClasses' (click)="sortBy('movieGenre')">Genre</a></th>
-            <th>Action</th>
+            <th class="text-center">Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor='let mg of movieGenres | sort: sortCriteria:sortOrder'>
-            <td>{{mg.movie.title}}</td>
-            <td>{{mg.genre.name}}</td>
-            <td><a routerLink='/moviegenre-detail/{{mg.id}}'>
+            <td class="data-padding">{{mg.movie.title}}</td>
+            <td class="data-padding">{{mg.genre.name}}</td>
+            <td class="text-center">
+                <a routerLink='/moviegenre-detail/{{mg.id}}'>
                 <img width='20' height='20' src='assets/details.png' title='Movie Genre Details'> </a>
-            | <a routerLink='/moviegenre-edit/{{mg.id}}'>
-              <img width='20' height='20' src='assets/pencil-icon.png' title='Movie Genre Edit'></a></td>
+                <span class="seperator">|</span> 
+                <a routerLink='/moviegenre-edit/{{mg.id}}'>
+              <img width='20' height='20' src='assets/pencil-icon.png' title='Movie Genre Edit'></a>
+            </td>
         </tr>
     </tbody>
 </table>
