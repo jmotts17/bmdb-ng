@@ -6,6 +6,7 @@ import { MovieGenre } from 'src/app/model/moviegenre.class';
 import { MoviegenreService } from 'src/app/service/moviegenre.service';
 import { GenreService } from 'src/app/service/genre.service';
 import { MovieService } from 'src/app/service/movie.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-moviegenre-create',
@@ -22,7 +23,8 @@ export class MoviegenreCreateComponent implements OnInit {
   constructor(private moviegenreSvc: MoviegenreService,
               private movieSvc: MovieService,
               private genreSvc: GenreService,
-              private router: Router) { }
+              private router: Router,
+              private loc: Location) { }
 
   ngOnInit(): void {
     this.movieSvc.getAll().subscribe(
@@ -56,6 +58,10 @@ export class MoviegenreCreateComponent implements OnInit {
           console.log(err);
         }
       );
+    }
+
+    backClicked() {
+      this.loc.back();
     }
     
 }

@@ -6,6 +6,7 @@ import { MovieGenre } from 'src/app/model/moviegenre.class';
 import { GenreService } from 'src/app/service/genre.service';
 import { MovieService } from 'src/app/service/movie.service';
 import { MoviegenreService } from 'src/app/service/moviegenre.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-moviegenre-edit',
@@ -24,7 +25,8 @@ export class MoviegenreEditComponent implements OnInit {
               private movieSvc: MovieService,
               private genreSvc: GenreService,
               private route: ActivatedRoute,
-              private router: Router) { }
+              private router: Router,
+              private loc: Location) { }
 
   ngOnInit(): void {
     // get the id from the url
@@ -72,6 +74,10 @@ export class MoviegenreEditComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  backClicked() {
+    this.loc.back();
   }
   
   compMovie(a: Movie, b: Movie): boolean {
