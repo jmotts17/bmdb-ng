@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/model/user.class';
 import { UserService } from 'src/app/service/user.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-user-create',
@@ -15,7 +16,8 @@ export class UserCreateComponent implements OnInit {
   user: User = new User();
 
   constructor(private userSvc: UserService,
-              private router: Router) { }
+              private router: Router,
+              private loc: Location) { }
 
   ngOnInit(): void {
   }
@@ -32,6 +34,10 @@ export class UserCreateComponent implements OnInit {
         console.log(err);
       }
     )
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
 }

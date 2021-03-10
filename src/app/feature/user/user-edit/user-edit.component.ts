@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/model/user.class';
 import { UserService } from 'src/app/service/user.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-user-edit',
@@ -16,7 +17,8 @@ export class UserEditComponent implements OnInit {
 
   constructor(private userSvc: UserService,
               private router: Router,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private loc: Location) { }
 
   ngOnInit(): void {
     // get the id from the url
@@ -46,6 +48,10 @@ export class UserEditComponent implements OnInit {
         console.log(err);
       }
     );
+  }
+
+  backClicked() {
+    this.loc.back();
   }
 
 }
