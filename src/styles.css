@@ -12,3 +12,18 @@
   font-size: 50px;
   padding: 0.5% 0;
 }
+
+.detail-heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.detail-link {
+  color: #0264d6;
+}
+
+.detail-link:hover {
+  color: #1c2b5a;
+}
