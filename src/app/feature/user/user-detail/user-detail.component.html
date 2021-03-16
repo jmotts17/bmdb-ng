@@ -1,15 +1,9 @@
 <app-menu></app-menu>
-<div class="component">
-    <section class="heading">
-        <span class="page-title font-weight-bold font-italic">{{title}}</span>
-        <span>&nbsp;<a routerLink="/user-list">Return to List</a></span>
-    </section>
-    <main *ngIf='user' class="single">
+<span>&nbsp;<a routerLink="/user-list">Return to List</a></span>
+<div class="component vertical-center">
+    <main *ngIf='user' class="single box-style">
+        <span class="page-title detail-heading">{{title}}</span>
         <table class="table table-sm">
-            <tr>
-                <td>ID</td>
-                <td>{{user.id}}</td>
-            </tr>
             <tr>
                 <td>Username:</td>
                 <td><input [(ngModel)]="user.username" class="rounded" type="text" disabled></td>
@@ -39,8 +33,8 @@
                 <td><input [(ngModel)]="user.collectionValue" class="rounded" type="text" disabled></td>
             </tr>
         </table>
+        <span>
+            <span>&nbsp;<button (click)="delete()" class="btn btn-sm btn-danger">Delete</button></span>
+        </span>
     </main>
-    <span>
-        <span>&nbsp;<button (click)="delete()" class="btn btn-sm btn-danger">Delete</button></span>
-    </span>
 </div>
