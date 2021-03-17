@@ -1,0 +1,32 @@
+.component {
+  background-color: #0264d6;
+}
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.box-style {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 50px 100px rgb(50 50 93 / 5%), 0 15px 35px rgb(50 50 93 / 10%),
+    0 5px 15px rgb(0 0 0 / 10%);
+  padding: 3.5em 3em;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 5px;
+  color: #000;
+}
+
+input {
+  background-color: #fff;
+  border: 1px solid #8d8c8a;
+}
