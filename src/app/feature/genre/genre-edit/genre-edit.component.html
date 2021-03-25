@@ -1,19 +1,19 @@
 <app-menu></app-menu>
-<section class="heading">
-    <span class='component-title'>[{{title}}]</span>
-  </section>
-  <main *ngIf='genre' class="single">
+<div class="component vertical-center">
+  <main class="single box-style">
+    <div class='page-title detail-heading'>{{title}}</div>
     <table class="table table-sm">
       <tr>
         <td>
-            Name:
+            Genre Name:
         </td>
         <td>
             <input [(ngModel)]="genre.name" class="rounded" type="text">
         </td>
       </tr>
     </table>
+    <span><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span>
+    <span class="seperator">|</span>
+    <span><button (click)="backClicked()" class="btn btn-sm btn-primary">Back</button></span>
   </main>
-  <span><button (click)="save()" class="btn btn-sm btn-primary">{{submitBtnTitle}}</button></span>
-  <span class="seperator">|</span>
-  <span><button (click)="backClicked()" class="btn btn-sm btn-primary">Back</button></span>
+</div>
